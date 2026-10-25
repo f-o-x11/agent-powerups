@@ -196,6 +196,17 @@ Cloudflare documentation retrieval via read-only remote MCP endpoint.
 
 ---
 
+### `deed-page`
+
+Publish static files (HTML, CSS, JS, images) to a permanent public `https://<slug>.deed.page/` URL, then update, version or delete them.
+
+**Runtime:** HTTP (`https://deed.page/mcp`, Streamable HTTP)
+**Required env:** None. The first `publish_site` call returns an owner token (`deed_tok_...`) once; keep it outside the repo.
+**Risk:** Medium. Published files are public on the free plan, so never publish secrets. Ask the user before publishing.
+**Maturity:** Beta
+
+---
+
 ### `exa-search`
 
 Exa semantic search and research integration.

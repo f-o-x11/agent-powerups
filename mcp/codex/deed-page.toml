@@ -1,0 +1,6 @@
+# Sources: https://deed.page/docs, https://github.com/f-o-x11/deed-page-skill
+# Remote MCP server over Streamable HTTP. No API key is needed to start; the first
+# publish_site call returns an owner token, which the agent must keep for later updates.
+[mcp_servers.deed-page]
+type = "http"
+url = "https://deed.page/mcp"

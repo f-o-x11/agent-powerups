@@ -5625,5 +5625,41 @@
         "yylo-ledger"
       ]
     }
+  },
+  {
+    "name": "deed-page",
+    "type": "mcp-config",
+    "summary": "Publish static files to a public deed.page URL via its hosted remote MCP server.",
+    "path": "mcp/generic/deed-page.json",
+    "compatible_with": [
+      "generic",
+      "codex",
+      "claude-code"
+    ],
+    "tags": [
+      "mcp",
+      "hosting",
+      "static-site",
+      "publish",
+      "http"
+    ],
+    "maturity": "beta",
+    "tier": "specialized",
+    "requires": {},
+    "mcp": {
+      "required_env": [],
+      "server_package": "https://deed.page/mcp",
+      "warning": "Publishes files to public URLs: free-plan sites are public, so never publish secrets. The first publish_site call returns an owner token once; store it outside the repo. Ask the user before publishing.",
+      "output_hints": {
+        "generic": ".mcp.json",
+        "claude-code": ".mcp.json",
+        "codex": "config.toml"
+      }
+    },
+    "targets": {
+      "codex": "mcp/codex/deed-page.toml",
+      "claude-code": "mcp/claude-code/deed-page.json",
+      "generic": "mcp/generic/deed-page.json"
+    }
   }
 ]
